@@ -1,0 +1,7 @@
+{
+  "name": "com.ambidekster.scenariosservice",
+  "version": "1.0.0",
+  "displayName": "Scenarios Service",
+  "unity": "6000.0.44f1",
+  "description": "Сервис для управления сценариями в Unity проекте"
+}
