@@ -7,7 +7,7 @@ using ScenariosService.Runtime.Scenarios;
 
 namespace ScenariosService.Runtime.Controllers
 {
-    public class ScenariosController : IScenariosController
+    internal class ScenariosController : IScenariosController
     {
         private readonly Stack<IScenario> _scenarios = new Stack<IScenario>();
         private readonly IScenariosFactory _scenariosFactory;
@@ -20,7 +20,7 @@ namespace ScenariosService.Runtime.Controllers
         public IScenario GetCurrentScenario() => _scenarios.Count > 0 ? 
                 _scenarios.Peek() : null;
         
-        public void OpenScenario<TModel>(ScenarioType scenarioType, TModel activationModel, bool closeParentScenario) 
+        public void OpenScenario<TModel>(Enum scenarioType, TModel activationModel, bool closeParentScenario) 
                 where TModel : IScenarioActivationModel
         {
             var scenarioToOpen = _scenariosFactory.CreateScenario(scenarioType);

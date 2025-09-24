@@ -9,7 +9,6 @@ namespace ScenariosService.Runtime.Scenarios
         event EventHandler CloseScenarioRequested;
         event EventHandler<OpenScenarioRequestEventArgs> OpenScenarioRequested;
         
-        ScenarioType ScenarioType { get; }
         ScenarioState State { get; }
 
         void Activate(IScenarioActivationModel model);

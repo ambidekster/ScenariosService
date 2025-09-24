@@ -10,9 +10,6 @@ namespace ScenariosService.Runtime.Scenarios
         public event EventHandler CloseScenarioRequested;
         public event EventHandler<OpenScenarioRequestEventArgs> OpenScenarioRequested;
         
-        // Todo: Remove?
-        public abstract ScenarioType ScenarioType { get; }
-        
         public ScenarioState State { get; private set; }
 
         protected TModel Model { get; private set; }
@@ -57,7 +54,7 @@ namespace ScenariosService.Runtime.Scenarios
         {
         }
         
-        protected void OpenScenario(ScenarioType scenarioType, 
+        protected void OpenScenario(Enum scenarioType, 
                                     IScenarioActivationModel activationModel, 
                                     bool closeParentScenario)
         {

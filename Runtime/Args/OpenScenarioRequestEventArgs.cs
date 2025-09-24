@@ -6,11 +6,11 @@ namespace ScenariosService.Runtime.Args
 {
     public class OpenScenarioRequestEventArgs : EventArgs
     {
-        public ScenarioType ScenarioType { get; }
+        public Enum ScenarioType { get; }
         public IScenarioActivationModel ActivationModel { get; }
         public bool CloseParentScenario { get; }
 
-        public OpenScenarioRequestEventArgs(ScenarioType scenarioType, 
+        public OpenScenarioRequestEventArgs(Enum scenarioType, 
                                             IScenarioActivationModel activationModel, 
                                             bool closeParentScenario)
         {
