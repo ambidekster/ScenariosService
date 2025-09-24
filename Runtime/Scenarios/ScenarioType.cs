@@ -1,4 +1,4 @@
-namespace Modules.ScenariosModule
+namespace ScenariosService.Runtime.Scenarios
 {
     public enum ScenarioType
     {

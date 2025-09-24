@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
-using Modules.ScenariosModule.Factories;
-using Modules.ScenariosModule.Models;
-using Modules.WindowsModule;
+using ScenariosService.Runtime.Args;
+using ScenariosService.Runtime.Factories;
+using ScenariosService.Runtime.Models;
+using ScenariosService.Runtime.Scenarios;
 
-namespace Modules.ScenariosModule
+namespace ScenariosService.Runtime.Controllers
 {
     public class ScenariosController : IScenariosController
     {

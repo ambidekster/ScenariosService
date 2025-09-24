@@ -1,7 +1,8 @@
 using System;
-using Modules.ScenariosModule.Models;
+using ScenariosService.Runtime.Models;
+using ScenariosService.Runtime.Scenarios;
 
-namespace Modules.ScenariosModule
+namespace ScenariosService.Runtime.Args
 {
     public class OpenScenarioRequestEventArgs : EventArgs
     {

@@ -1,4 +1,4 @@
-namespace Modules.ScenariosModule.Models
+namespace ScenariosService.Runtime.Models
 {
     public interface IScenarioActivationModel
     {

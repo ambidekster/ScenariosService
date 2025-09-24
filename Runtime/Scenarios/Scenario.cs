@@ -1,8 +1,8 @@
 using System;
-using Modules.ScenariosModule.Models;
-using Modules.WindowsModule;
+using ScenariosService.Runtime.Args;
+using ScenariosService.Runtime.Models;
 
-namespace Modules.ScenariosModule
+namespace ScenariosService.Runtime.Scenarios
 {
     public abstract class Scenario<TModel> : IScenario 
             where TModel : IScenarioActivationModel
@@ -16,13 +16,6 @@ namespace Modules.ScenariosModule
         public ScenarioState State { get; private set; }
 
         protected TModel Model { get; private set; }
-
-        protected IWindowsDisplayController WindowsDisplayController { get; }
-
-        protected Scenario(IWindowsDisplayController windowsDisplayController)
-        {
-            WindowsDisplayController = windowsDisplayController;
-        }
 
         public void Activate(IScenarioActivationModel model)
         {

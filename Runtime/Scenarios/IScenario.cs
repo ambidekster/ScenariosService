@@ -1,7 +1,8 @@
 using System;
-using Modules.ScenariosModule.Models;
+using ScenariosService.Runtime.Args;
+using ScenariosService.Runtime.Models;
 
-namespace Modules.ScenariosModule
+namespace ScenariosService.Runtime.Scenarios
 {
     public interface IScenario
     {
