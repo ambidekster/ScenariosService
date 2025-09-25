@@ -4,6 +4,7 @@ using ScenariosService.Runtime.Args;
 using ScenariosService.Runtime.Factories;
 using ScenariosService.Runtime.Models;
 using ScenariosService.Runtime.Scenarios;
+using ScenariosService.Runtime.Tools;
 
 namespace ScenariosService.Runtime.Controllers
 {
@@ -19,7 +20,12 @@ namespace ScenariosService.Runtime.Controllers
 
         public IScenario GetCurrentScenario() => _scenarios.Count > 0 ? 
                 _scenarios.Peek() : null;
-        
+
+        public void OpenScenario(Enum scenarioType, bool closeParentScenario)
+        {
+            OpenScenario(scenarioType, ScenariosTools.EmptyActivationModel, closeParentScenario);
+        }
+
         public void OpenScenario<TModel>(Enum scenarioType, TModel activationModel, bool closeParentScenario) 
                 where TModel : IScenarioActivationModel
         {

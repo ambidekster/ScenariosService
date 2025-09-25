@@ -1,7 +1,6 @@
 using System;
 using ScenariosService.Runtime.Controllers;
 using ScenariosService.Runtime.Factories;
-using ScenariosService.Runtime.Models;
 using UnityEngine;
 
 namespace ScenariosService.Runtime.Builders
@@ -38,7 +37,7 @@ namespace ScenariosService.Runtime.Builders
             }
             
             new ScenariosController(_factory).OpenScenario(
-                    _startScenarioType, new EmptyScenarioActivationModel(), false);
+                    _startScenarioType, false);
         }
     }
 }

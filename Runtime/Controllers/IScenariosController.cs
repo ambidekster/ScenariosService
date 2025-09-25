@@ -8,6 +8,7 @@ namespace ScenariosService.Runtime.Controllers
     {
         IScenario GetCurrentScenario();
         
+        void OpenScenario(Enum scenarioType, bool closeParentScenario);
         void OpenScenario<TModel>(Enum scenarioType, TModel activationModel, bool closeParentScenario)
                 where TModel : IScenarioActivationModel;
     }

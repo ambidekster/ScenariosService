@@ -1,6 +1,7 @@
 using System;
 using ScenariosService.Runtime.Args;
 using ScenariosService.Runtime.Models;
+using ScenariosService.Runtime.Tools;
 
 namespace ScenariosService.Runtime.Scenarios
 {
@@ -52,6 +53,12 @@ namespace ScenariosService.Runtime.Scenarios
         
         protected virtual void OnClose()
         {
+        }
+        
+        protected void OpenScenario(Enum scenarioType, 
+                                    bool closeParentScenario)
+        {
+            OpenScenario(scenarioType, ScenariosTools.EmptyActivationModel, closeParentScenario);
         }
         
         protected void OpenScenario(Enum scenarioType, 
