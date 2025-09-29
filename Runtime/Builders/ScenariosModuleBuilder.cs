@@ -22,22 +22,21 @@ namespace Modules.ScenariosModule.Runtime.Builders
             return this;
         }
 
-        public void Build()
+        public IStartScenarioLauncher Build()
         {
             if(_factory == null)
             {
                 Debug.LogException(new Exception($"Invalid scenarios factory!"));
-                return;
+                return null;
             }
             
             if(_startScenarioType.Equals(null))
             {
                 Debug.LogException(new Exception($"Invalid start scenario type!"));
-                return;
+                return null;
             }
             
-            new ScenariosController(_factory).OpenScenario(
-                    _startScenarioType, false);
+            return new StartScenarioLauncher(_startScenarioType, new ScenariosController(_factory));
         }
     }
 }

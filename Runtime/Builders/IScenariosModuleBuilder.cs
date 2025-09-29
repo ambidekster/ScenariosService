@@ -1,4 +1,5 @@
 using System;
+using Modules.ScenariosModule.Runtime.Controllers;
 using Modules.ScenariosModule.Runtime.Factories;
 
 namespace Modules.ScenariosModule.Runtime.Builders
@@ -8,6 +9,6 @@ namespace Modules.ScenariosModule.Runtime.Builders
         public IScenariosModuleBuilder WithFactory(IScenariosFactory factory);
         public IScenariosModuleBuilder WithStartScenario(Enum scenarioType);
         
-        public void Build();
+        public IStartScenarioLauncher Build();
     }
 }
