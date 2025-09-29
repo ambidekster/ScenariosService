@@ -1,9 +1,9 @@
 {
-  "name": "com.ambidekster.scenariosservice",
+  "name": "com.ambidekster.scenariosmodule",
   "version": "1.0.0",
-  "displayName": "Scenarios Service",
+  "displayName": "Scenarios Module",
   "unity": "6000.0",
-  "description": "Сервис для управления сценариями в Unity проекте",
+  "description": "Сервис для управления сценариями (организации управления состояниями)",
   "author": {
     "name": "ambidekster",
     "email": "ambidekster@icloud.com"

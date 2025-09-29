@@ -1,7 +1,7 @@
 using System;
-using ScenariosService.Runtime.Scenarios;
+using Modules.ScenariosModule.Runtime.Scenarios;
 
-namespace ScenariosService.Runtime.Factories
+namespace Modules.ScenariosModule.Runtime.Factories
 {
     public interface IScenariosFactory
     {

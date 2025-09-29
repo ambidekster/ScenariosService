@@ -1,6 +1,6 @@
-using ScenariosService.Runtime.Models;
+using Modules.ScenariosModule.Runtime.Models;
 
-namespace ScenariosService.Runtime.Tools
+namespace Modules.ScenariosModule.Runtime.Tools
 {
     internal static class ScenariosTools
     {

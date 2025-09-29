@@ -1,4 +1,4 @@
-namespace ScenariosService.Runtime.Scenarios
+namespace Modules.ScenariosModule.Runtime.Scenarios
 {
     public enum ScenarioState
     {

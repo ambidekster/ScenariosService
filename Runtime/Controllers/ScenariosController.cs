@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using ScenariosService.Runtime.Args;
-using ScenariosService.Runtime.Factories;
-using ScenariosService.Runtime.Models;
-using ScenariosService.Runtime.Scenarios;
-using ScenariosService.Runtime.Tools;
+using Modules.ScenariosModule.Runtime.Args;
+using Modules.ScenariosModule.Runtime.Factories;
+using Modules.ScenariosModule.Runtime.Models;
+using Modules.ScenariosModule.Runtime.Scenarios;
+using Modules.ScenariosModule.Runtime.Tools;
 
-namespace ScenariosService.Runtime.Controllers
+namespace Modules.ScenariosModule.Runtime.Controllers
 {
     internal class ScenariosController : IScenariosController
     {

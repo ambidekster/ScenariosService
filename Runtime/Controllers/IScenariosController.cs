@@ -1,8 +1,8 @@
 using System;
-using ScenariosService.Runtime.Models;
-using ScenariosService.Runtime.Scenarios;
+using Modules.ScenariosModule.Runtime.Models;
+using Modules.ScenariosModule.Runtime.Scenarios;
 
-namespace ScenariosService.Runtime.Controllers
+namespace Modules.ScenariosModule.Runtime.Controllers
 {
     internal interface IScenariosController
     {

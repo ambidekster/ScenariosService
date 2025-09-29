@@ -1,22 +1,22 @@
 using System;
-using ScenariosService.Runtime.Controllers;
-using ScenariosService.Runtime.Factories;
+using Modules.ScenariosModule.Runtime.Controllers;
+using Modules.ScenariosModule.Runtime.Factories;
 using UnityEngine;
 
-namespace ScenariosService.Runtime.Builders
+namespace Modules.ScenariosModule.Runtime.Builders
 {
-    public class ScenariosServiceBuilder : IScenariosServiceBuilder
+    public class ScenariosModuleBuilder : IScenariosModuleBuilder
     {
         private IScenariosFactory _factory;
         private Enum _startScenarioType;
         
-        public IScenariosServiceBuilder WithFactory(IScenariosFactory factory)
+        public IScenariosModuleBuilder WithFactory(IScenariosFactory factory)
         {
             _factory = factory;
             return this;
         }
 
-        public IScenariosServiceBuilder WithStartScenario(Enum scenarioType)
+        public IScenariosModuleBuilder WithStartScenario(Enum scenarioType)
         {
             _startScenarioType = scenarioType;
             return this;

@@ -1,9 +1,9 @@
 using System;
-using ScenariosService.Runtime.Args;
-using ScenariosService.Runtime.Models;
-using ScenariosService.Runtime.Tools;
+using Modules.ScenariosModule.Runtime.Args;
+using Modules.ScenariosModule.Runtime.Models;
+using Modules.ScenariosModule.Runtime.Tools;
 
-namespace ScenariosService.Runtime.Scenarios
+namespace Modules.ScenariosModule.Runtime.Scenarios
 {
     public abstract class Scenario<TModel> : IScenario 
             where TModel : IScenarioActivationModel
