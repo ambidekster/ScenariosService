@@ -9,7 +9,6 @@ namespace Modules.ScenariosModule.Runtime.Scenarios
         event EventHandler CloseScenarioRequested;
         event EventHandler<OpenScenarioRequestEventArgs> OpenScenarioRequested;
         
-        Enum Type { get; }
         ScenarioState State { get; }
 
         void Activate(IScenarioActivationModel model);
