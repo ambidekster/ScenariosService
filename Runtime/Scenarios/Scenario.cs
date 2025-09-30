@@ -12,6 +12,8 @@ namespace Modules.ScenariosModule.Runtime.Scenarios
         public event EventHandler<OpenScenarioRequestEventArgs> OpenScenarioRequested;
         
         public ScenarioState State { get; private set; }
+        
+        public abstract Enum Type { get; }
 
         protected TModel Model { get; private set; }
 
