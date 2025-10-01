@@ -1,7 +1,6 @@
 namespace Modules.ScenariosModule.Runtime.Models
 {
-    public interface IScenarioActivationModel
+    public class EmptyScenarioStartModel : IScenarioStartModel
     {
-        
     }
 }

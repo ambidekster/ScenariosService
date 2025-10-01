@@ -9,7 +9,7 @@ namespace Modules.ScenariosModule.Runtime.Controllers
         IScenario GetCurrentScenario();
         
         void OpenScenario(Enum scenarioType, bool closeParentScenario);
-        void OpenScenario<TModel>(Enum scenarioType, TModel activationModel, bool closeParentScenario)
-                where TModel : IScenarioActivationModel;
+        void OpenScenario<TModel>(Enum scenarioType, TModel startModel, bool closeParentScenario)
+                where TModel : IScenarioStartModel;
     }
 }

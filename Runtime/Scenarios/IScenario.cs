@@ -11,7 +11,7 @@ namespace Modules.ScenariosModule.Runtime.Scenarios
         
         ScenarioState State { get; }
 
-        void Activate(IScenarioActivationModel model);
+        void Start(IScenarioStartModel model);
         void Close();
         
         void Pause();

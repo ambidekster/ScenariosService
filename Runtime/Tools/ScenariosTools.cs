@@ -4,6 +4,6 @@ namespace Modules.ScenariosModule.Runtime.Tools
 {
     internal static class ScenariosTools
     {
-        public static readonly IScenarioActivationModel EmptyActivationModel = new EmptyScenarioActivationModel();
+        public static readonly IScenarioStartModel EmptyStartModel = new EmptyScenarioStartModel();
     }
 }

@@ -6,15 +6,15 @@ namespace Modules.ScenariosModule.Runtime.Args
     public class OpenScenarioRequestEventArgs : EventArgs
     {
         public Enum ScenarioType { get; }
-        public IScenarioActivationModel ActivationModel { get; }
+        public IScenarioStartModel StartModel { get; }
         public bool CloseParentScenario { get; }
 
         public OpenScenarioRequestEventArgs(Enum scenarioType, 
-                                            IScenarioActivationModel activationModel, 
+                                            IScenarioStartModel startModel, 
                                             bool closeParentScenario)
         {
             ScenarioType = scenarioType;
-            ActivationModel = activationModel;
+            StartModel = startModel;
             CloseParentScenario = closeParentScenario;
         }
     }

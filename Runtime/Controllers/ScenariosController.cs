@@ -23,11 +23,11 @@ namespace Modules.ScenariosModule.Runtime.Controllers
 
         public void OpenScenario(Enum scenarioType, bool closeParentScenario)
         {
-            OpenScenario(scenarioType, ScenariosTools.EmptyActivationModel, closeParentScenario);
+            OpenScenario(scenarioType, ScenariosTools.EmptyStartModel, closeParentScenario);
         }
 
-        public void OpenScenario<TModel>(Enum scenarioType, TModel activationModel, bool closeParentScenario) 
-                where TModel : IScenarioActivationModel
+        public void OpenScenario<TModel>(Enum scenarioType, TModel startModel, bool closeParentScenario) 
+                where TModel : IScenarioStartModel
         {
             var scenarioToOpen = _scenariosFactory.CreateScenario(scenarioType);
             if(scenarioToOpen != null)
@@ -36,7 +36,7 @@ namespace Modules.ScenariosModule.Runtime.Controllers
                 
                 scenarioToOpen.OpenScenarioRequested += HandleOpenScenarioRequested;
                 scenarioToOpen.CloseScenarioRequested += HandleCloseScenarioRequested;
-                scenarioToOpen.Activate(activationModel);
+                scenarioToOpen.Start(startModel);
                 
                 _scenarios.Push(scenarioToOpen);   
             }
@@ -81,7 +81,7 @@ namespace Modules.ScenariosModule.Runtime.Controllers
                 return;
             }
             
-            OpenScenario(e.ScenarioType, e.ActivationModel, e.CloseParentScenario);
+            OpenScenario(e.ScenarioType, e.StartModel, e.CloseParentScenario);
         }
         
         private void HandleCloseScenarioRequested(object sender, EventArgs e)

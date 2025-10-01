@@ -6,7 +6,7 @@ using Modules.ScenariosModule.Runtime.Tools;
 namespace Modules.ScenariosModule.Runtime.Scenarios
 {
     public abstract class Scenario<TModel> : IScenario 
-            where TModel : IScenarioActivationModel
+            where TModel : IScenarioStartModel
     {
         public event EventHandler CloseScenarioRequested;
         public event EventHandler<OpenScenarioRequestEventArgs> OpenScenarioRequested;
@@ -15,14 +15,14 @@ namespace Modules.ScenariosModule.Runtime.Scenarios
 
         protected TModel Model { get; private set; }
 
-        public void Activate(IScenarioActivationModel model)
+        public void Start(IScenarioStartModel model)
         {
             State = ScenarioState.Active;
             Model = (TModel)model;
-            OnActivate(Model);
+            OnStart(Model);
         }
 
-        protected virtual void OnActivate(IScenarioActivationModel model)
+        protected virtual void OnStart(TModel model)
         {
         }
 
@@ -58,15 +58,15 @@ namespace Modules.ScenariosModule.Runtime.Scenarios
         protected void OpenScenario(Enum scenarioType, 
                                     bool closeParentScenario)
         {
-            OpenScenario(scenarioType, ScenariosTools.EmptyActivationModel, closeParentScenario);
+            OpenScenario(scenarioType, ScenariosTools.EmptyStartModel, closeParentScenario);
         }
         
         protected void OpenScenario(Enum scenarioType, 
-                                    IScenarioActivationModel activationModel, 
+                                    IScenarioStartModel startModel, 
                                     bool closeParentScenario)
         {
             OpenScenarioRequested?.Invoke(this, 
-                    new OpenScenarioRequestEventArgs(scenarioType, activationModel, closeParentScenario));
+                    new OpenScenarioRequestEventArgs(scenarioType, startModel, closeParentScenario));
         }
 
         protected void CloseScenario()
